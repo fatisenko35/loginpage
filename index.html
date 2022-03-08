@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Amiri&family=Bitter&family=Bowlby+One+SC&family=Indie+Flower&family=Lato&family=Open+Sans&family=Poppins&family=Raleway&family=Roboto+Mono&family=Sansita+Swashed&family=Sorts+Mill+Goudy:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body onresize="myResize()">
+    <div class="container">
+      <div class="container-left">
+        <div class="header-left">
+          <div class="topnav">
+            <h2>Page Head</h2>
+            <div id="myLinks">
+              <a href="#news">Home</a>
+              <a href="#about">About</a>
+              <a href="#">FAQ</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <div class="icon">
+              <a class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
+          <div class="container-left-aside">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="form">
+          <form action="#">
+            <div class="email">
+              <label for="email">Enter your email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@example.com"
+              />
+            </div>
+            <div class="password">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="*************"
+              />
+            </div>
+            <div class="remember">
+              <div class="remember-left">
+                <input type="checkbox" name="remember" id="remember" />
+                <label for="remember">Remember Me</label>
+              </div>
+              <div class="remember-right">
+                <a href="#" class="forgot">Forgot Password</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="buttons">
+          <button class="btn-login">Log In</button>
+          <button class="btn-signin">Sıgn In</button>
+        </div>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Google</a>
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="header-right">
+          <ul>
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>FAQ</li></a>
+            <a href="#"><li>Contact</li></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      var selector = ".email";
+      $(selector).on("click", function () {
+        $(selector2).removeClass("active");
+        $(selector).removeClass("active");
+        $(this).addClass("active");
+        $(selector).on("focusout", () => {
+          $(selector).removeClass("active");
+        });
+      });
+
+      var selector2 = ".password";
+      $(selector2).on("click", function () {
+        $(selector).removeClass("active");
+        $(selector2).removeClass("active");
+        $(this).addClass("active");
+        $(selector2).on("focusout", () => {
+          $(selector2).removeClass("active");
+        });
+      });
+    </script>
+    <script>
+      var x = document.getElementById("myLinks");     
+      function myResize() {
+        if (window.innerWidth > 900 && x.style.display === 'block'){
+            x.style.display = 'none';
+            console.log("hi");
+        }
+      }
+      function myFunction() {
+        
+          if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+          
+        }
+        
+      }
+    </script>
+  </body>
+</html>
