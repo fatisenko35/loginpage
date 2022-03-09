@@ -16,7 +16,7 @@
 }
 
 .header-right {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
    
@@ -70,7 +70,8 @@ a{
     background: rgba(229, 229, 229, 0.41);
     padding: 2rem;
     margin-left: 0rem;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .container-left{
    padding:2rem;
@@ -78,6 +79,15 @@ a{
    flex-direction: column;
    justify-content: space-between;
 
+}
+
+.container-right-section{
+    margin-bottom: 3rem;
+}
+.container-right-section img{
+    padding: 1rem;
+    width: 35rem;
+    height: 17rem;
 }
 
 label{
@@ -156,6 +166,7 @@ button{
     margin-right: 2rem;
     font-weight: 700;
 }
+
 .topnav {
 
     position: relative;
