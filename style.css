@@ -82,14 +82,20 @@ a{
 }
 
 .container-right-section{
+    display:flex;
+    justify-content: center;
+    align-items:center;
     margin-bottom: 3rem;
+    padding:1rem;
+  
 }
 .container-right-section img{
     padding: 1rem;
     width: 35rem;
     height: 17rem;
-    margin-left: 5rem;
-    margin-bottom:3rem;
+     /* margin:auto; */
+  
+  
 }
 
 label{
@@ -115,11 +121,12 @@ input{
 
   }
 
-
-.email.active{
-    border-left: 3px solid #0C31F1;
+.signwith{
+    color: rgba(0, 0, 0, 0.61);
+ 
 }
-.password.active{
+.password.active,
+.email.active{
     border-left: 3px solid #0C31F1;
 }
 .remember{
@@ -128,6 +135,7 @@ input{
     flex-direction: row;
     justify-content: space-between;
     margin: 0 1rem;
+    font-size:13px;
     
 }
 
@@ -139,13 +147,16 @@ input{
     margin: 0 1rem;
 }
 button{
+  
+  cursor: pointer;
     padding:0.5rem 2rem;
     margin-right: 1rem;
-    font-family: Roboto;
+     border: 1px solid #3751FE;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
+    
 }
 .btn-login{
     background: #3751FE;
@@ -154,7 +165,7 @@ button{
 }
 .btn-signin{
     background: #FFFFFF;
-    border: 1px solid #3751FE;
+   
     color: rgba(12, 49, 241, 1);
 
 }
@@ -167,6 +178,9 @@ button{
     padding-left:1rem;
     margin-right: 2rem;
     font-weight: 700;
+}
+a:hover{
+  text-decoration: underline;
 }
 
 .topnav {
